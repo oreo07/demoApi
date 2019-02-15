@@ -1,7 +1,7 @@
 pipeline {
     agent none
     environment {
-        imageName = 'YOUR_IMAGE_NAME'
+        imageName = 'docker_hub'
         port = 3030
     }
     
