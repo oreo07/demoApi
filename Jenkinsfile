@@ -1,7 +1,7 @@
 pipeline {
     agent none
     environment {
-        imageName = 'docker_hub'
+        imageName = 'tnbd/demoapi'
         port = 3030
     }
     
@@ -19,7 +19,7 @@ pipeline {
           steps {
             withCredentials(
                 [usernamePassword(
-                    credentialsId: 'vagrant', 
+                    credentialsId: 'docker_hub', 
                     passwordVariable: 'dockerHubPassword', 
                     usernameVariable: 'dockerHubUser'
                 )]
